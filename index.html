@@ -46,15 +46,16 @@
       color: #5c6b78;
     }
 
-    .profile-photo {
-      display: block;
-      width: 160px;
-      height: 200px;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 4px;
-      flex-shrink: 0;
-    }
+.profile-photo {
+  display: block;
+  width: 160px;
+  height: auto;
+  max-height: 240px;
+  object-fit: contain;
+  object-position: top center;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
 
     nav {
       margin-top: 20px;
