@@ -4,22 +4,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Academic website of Simone Schüller, Senior Researcher in Economics.">
-  <title>Simone Schüller | Economics</title>
+  <meta name="description" content="Simone Schüller is a tenured Senior Researcher in Economics at the German Youth Institute (DJI), specializing in applied labor economics, policy evaluation, families, education, migration, and digitalization.">
+  <title>Simone Schüller | Applied Economics</title>
 
   <style>
+    :root {
+      --navy: #183650;
+      --blue: #24618b;
+      --text: #263442;
+      --muted: #657582;
+      --line: #dce2e8;
+      --background: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      max-width: 850px;
-      margin: 65px auto;
-      padding: 0 24px;
+      max-width: 1000px;
+      margin: 55px auto;
+      padding: 0 28px;
       font-family: Arial, Helvetica, sans-serif;
-      color: #263442;
+      color: var(--text);
       line-height: 1.7;
-      background: #fff;
+      background: var(--background);
     }
 
     header {
-      border-bottom: 1px solid #dce2e8;
+      border-bottom: 1px solid var(--line);
       padding-bottom: 25px;
     }
 
@@ -27,84 +40,128 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 30px;
+      gap: 36px;
     }
 
+    .intro { flex: 1; }
+
     h1 {
-      font-size: 2.4rem;
-      margin-bottom: 4px;
-      color: #183650;
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin: 0 0 12px;
+      color: var(--navy);
+      letter-spacing: -0.6px;
     }
 
     h2 {
-      color: #183650;
-      margin-top: 35px;
-      font-size: 1.3rem;
+      color: var(--navy);
+      margin-top: 42px;
+      margin-bottom: 14px;
+      font-size: 1.45rem;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 7px;
     }
+
+    h3 {
+      color: var(--navy);
+      font-size: 1.08rem;
+      margin-top: 25px;
+      margin-bottom: 8px;
+    }
+
+    p { margin: 0 0 15px; }
 
     .subtitle {
-      color: #5c6b78;
+      color: var(--muted);
+      font-size: 1.08rem;
     }
 
-.profile-photo {
-  display: block;
-  width: 320px;
-  height: auto;
-  max-height: none;
-  object-fit: contain;
-  object-position: top center;
-  border-radius: 4px;
-  flex-shrink: 0;
-}
+    .affiliations {
+      color: var(--muted);
+      font-size: .94rem;
+      margin-top: 12px;
+    }
+
+    .profile-photo {
+      display: block;
+      width: 320px;
+      height: auto;
+      max-height: none;
+      object-fit: contain;
+      object-position: top center;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
 
     nav {
-      margin-top: 20px;
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 22px;
     }
 
-    nav a {
-      margin-right: 18px;
-    }
-
-    a {
-      color: #24618b;
+    nav a, a {
+      color: var(--blue);
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
+    a:hover { text-decoration: underline; }
+
+    .research-fields {
+      color: var(--muted);
+      font-size: .98rem;
     }
 
-    footer {
-      border-top: 1px solid #dce2e8;
-      margin-top: 45px;
-      padding-top: 15px;
-      color: #71808b;
+    .publication {
+      margin-bottom: 17px;
+      padding-left: 17px;
+      border-left: 2px solid #e5ebf0;
+    }
+
+    .publication p {
+      margin-bottom: 4px;
+    }
+
+    .year {
+      color: var(--muted);
+      font-weight: bold;
       font-size: .9rem;
     }
 
-    @media (max-width: 600px) {
-      body {
-        margin-top: 30px;
-      }
+    .note {
+      color: var(--muted);
+      font-size: .93rem;
+    }
 
-      h1 {
-        font-size: 2rem;
+    .contact-links a { margin-right: 16px; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      margin-top: 55px;
+      padding: 18px 0 10px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        margin-top: 28px;
+        padding: 0 18px;
       }
 
       .header-content {
         flex-direction: column-reverse;
-        gap: 15px;
+        gap: 20px;
       }
 
-.profile-photo {
-  width: 200px;
-  height: auto;
-}
-
-      nav a {
-        display: inline-block;
-        margin-bottom: 8px;
+      .profile-photo {
+        width: min(100%, 260px);
+        height: auto;
       }
+
+      h1 { font-size: 2rem; }
+      h2 { margin-top: 32px; }
+      nav { gap: 8px 16px; }
     }
   </style>
 </head>
@@ -112,11 +169,25 @@
 <body>
   <header>
     <div class="header-content">
-      <div>
+      <div class="intro">
         <h1>Simone Schüller</h1>
+
         <div class="subtitle">
-          Senior Researcher in Economics · Munich, Germany
+          Tenured Senior Researcher in Economics
         </div>
+
+        <p class="affiliations">
+          Department of Families and Family Policies<br>
+          German Youth Institute (DJI), Munich, Germany<br>
+          Research affiliations: ifo Institute, CESifo,
+          IZA@LISER and FBK-IRVAPP
+        </p>
+
+        <p style="margin-top: 20px;">
+          <a href="cv_schueller_06_2026.pdf">
+            Download CV (PDF)
+          </a>
+        </p>
       </div>
 
       <img
@@ -126,9 +197,11 @@
       >
     </div>
 
-    <nav>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
+      <a href="#policy">Policy &amp; Other Publications</a>
       <a href="#projects">Projects</a>
       <a href="#cv">CV</a>
       <a href="#contact">Contact</a>
@@ -136,74 +209,612 @@
   </header>
 
   <main>
-    <section>
+    <section id="about">
       <h2>About</h2>
+
       <p>
-        I am a tenured Senior Researcher at the German Youth Institute
+        I am a tenured Senior Researcher in the Department of
+        Families and Family Policies at the German Youth Institute
         (Deutsches Jugendinstitut, DJI) in Munich.
-        My work focuses on applied empirical research and
-        the evaluation of public policies.
-      </p>
-      <p>
-       As an applied labor economist, my aim is to conduct relevant research that enables policymakers to make evidence-based decisions. In addition to topics in migration economics, I am particularly interested in the blessings and curses of the digital transformation, which includes the impact of technology diffusion on local economies and the impact of telework and digital media in families. I have a deep passion for data and econometric methods of causal inference and policy evaluation.
       </p>
 
+      <p>
+        My research applies empirical methods to questions at the
+        intersection of labor economics, family economics, education,
+        migration, and technological change. I am particularly
+        interested in policy evaluation and in generating robust
+        empirical evidence to inform public policy.
+      </p>
+
+      <p>
+        My work has been published in international peer-reviewed
+        journals, including Labour Economics, Journal of Population
+        Economics, Economics Letters, International Migration Review,
+        and Regional Science and Urban Economics.
+      </p>
     </section>
 
     <section id="research">
       <h2>Research</h2>
+
+      <p class="research-fields">
+        Applied Labor Economics · Policy Evaluation · Family Economics ·
+        Education · Migration · Digitalization
+      </p>
+
       <p>
-        My research uses empirical methods to study
-        social and economic outcomes, family policies,
-        and inequalities across individuals and families.
+        My research examines how public policies, labor-market
+        conditions, and technological change affect individuals,
+        children, and families. I use quantitative empirical methods
+        to study causal effects, behavioral responses, and social
+        and economic inequalities.
+      </p>
+
+      <h3>Labor Markets and Digitalization</h3>
+      <p>
+        Research on working from home, digital infrastructure,
+        technological change, and their implications for employment,
+        productivity, and the division of paid and unpaid work.
+      </p>
+
+      <h3>Families and Family Policy</h3>
+      <p>
+        Research on parental employment, childcare, the division of
+        care work, family well-being, and the economic circumstances
+        of separated parents.
+      </p>
+
+      <h3>Education and Inequality</h3>
+      <p>
+        Research on educational attainment, school transitions,
+        intergenerational transmission, and inequalities related to
+        family background and migration.
+      </p>
+
+      <h3>Migration and Integration</h3>
+      <p>
+        Research on immigrant integration, citizenship, ethnic
+        identity, education, labor-market outcomes, and attitudes
+        toward immigration.
       </p>
     </section>
 
     <section id="publications">
       <h2>Selected Publications</h2>
-      <p>
-        A complete list of publications and working papers
-        will be added here.
+
+      <p class="note">
+        Peer-reviewed journal articles. Publications are listed
+        in reverse chronological order.
       </p>
+
+      <h3>2026</h3>
+
+      <div class="publication">
+        <p>
+          <strong>Birthright Citizenship and Youth Crime.</strong>
+          <em>American Economic Association: Papers &amp; Proceedings</em>,
+          116, 331–336, 2026.
+          With Leander Andres, Stefan Bauernschuster, Gordon B. Dahl,
+          and Helmut Rainer.
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Gaming Behavior Changes in Families: Mothers and Children
+            During the COVID-19 Pandemic.
+          </strong>
+          <em>Family Relations</em>, 2026.
+          With Claudia Zerle-Elsäßer, Öykü Camligüney,
+          Andrea Langmeyer, and Thorsten Naab.
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Estimating the Effect of Working from Home on Parents'
+            Division of Childcare and Housework: A New Panel IV Approach.
+          </strong>
+          <em>Labour Economics</em>, 99, 102866, 2026.
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Enhancing Potentials for Research on Post-Separation Families
+            Using the Growing up in Germany Panel.
+          </strong>
+          <em>Journal of Family Research</em>, 38, 110–129, 2026.
+          With Claudia Recksiedler, Daniel Schacht, Christina Boll,
+          Caroline Entleitner-Phleps, Andrea Langmeyer,
+          Sabine Walper, and Claudia Zerle-Elsäßer.
+        </p>
+      </div>
+
+      <h3>2025</h3>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Working from Home and Parental Childcare Division:
+            Evidence from Two Years of the COVID-19 Pandemic.
+          </strong>
+          <em>Social Politics: International Studies in Gender,
+          State &amp; Society</em>, 32(4), 780–806, 2025.
+          With Christina Boll, Daniel Müller, and Christian Osiander.
+        </p>
+      </div>
+
+      <h3>2024</h3>
+
+      <div class="publication">
+        <p>
+          <strong>Ethnic Spatial Dispersion and Immigrant Identity.</strong>
+          <em>Journal of Chinese Economic and Business Studies</em>,
+          22(2), 205–230, 2024.
+          With Amelie F. Constant and Klaus F. Zimmermann.
+        </p>
+      </div>
+
+      <h3>2023</h3>
+
+      <div class="publication">
+        <p>
+          <strong>Germany's Capacities to Work from Home.</strong>
+          <em>European Economic Review</em>, 151, 104354, 2023.
+          With Jan-Philip V. Alipour and Oliver Falck.
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Neither Backlash nor Convergence: Dynamics of Intra-Couple
+            Childcare Division during the Covid-19 Pandemic in Germany.
+          </strong>
+          <em>Journal for Labour Market Research</em>, 57, 27, 2023.
+          With Christina Boll and Daniel Müller.
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>Family Climate in Pandemic Times: Adolescents and Mothers.</strong>
+          <em>Social Inclusion</em>, 11(1), 282–294, 2023.
+          With Thomas Eichhorn, Hans S. Steinberg, and
+          Claudia Zerle-Elsäßer.
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>
+            The Economic Well-Being of Nonresident Fathers and Custodial
+            Mothers Revisited: The Role of Paternal Childcare.
+          </strong>
+          <em>Journal of Family and Economic Issues</em>, 44, 836–853,
+          2023. With Christina Boll.
+        </p>
+      </div>
+
+      <h3>2022</h3>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Parents under Stress: Evaluating Emergency Childcare Policies
+            during the First COVID-19 Lockdown in Germany.
+          </strong>
+          <em>Labour Economics</em>, 78, 102217, 2022.
+          With Hans S. Steinberg.
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>Ethnic Enclaves and Immigrant Economic Integration.</strong>
+          <em>IZA World of Labor</em>, 287, 2022.
+          With Tanika Chakraborty.
+        </p>
+      </div>
+
+      <h3>2021</h3>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Von solitären Interneteltern und gemeinschaftsorientierten
+            Fernsehfamilien. Eine Typologie digitaler Mediennutzung
+            in Familien.
+          </strong>
+          <em>Journal for Sociology of Education and Socialization</em>,
+          41(4), 413–431, 2021.
+          With Claudia Zerle-Elsäßer, Andrea Langmeyer,
+          Thorsten Naab, and Sebastian Heuberger.
+        </p>
+      </div>
+
+      <h3>2020</h3>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Internet and Voting in the Social Media Era:
+            Evidence from a Local Broadband Policy.
+          </strong>
+          <em>Research Policy</em>, 49(1), 2020.
+          With Stefan Poy.
+        </p>
+      </div>
+
+      <h3>2019</h3>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Beyond the Average: Ethnic Capital Heterogeneity and
+            Intergenerational Transmission of Education.
+          </strong>
+          <em>Journal of Economic Behavior &amp; Organization</em>,
+          163, 551–569, 2019.
+          With Tanika Chakraborty and Klaus F. Zimmermann.
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Broadband Upgrade and Firm Performance in Rural Areas:
+            Quasi-experimental Evidence.
+          </strong>
+          <em>Regional Science and Urban Economics</em>,
+          77, 87–103, 2019.
+          With Giulia Canzian and Stefan Poy.
+        </p>
+      </div>
+
+      <h3>2017</h3>
+
+      <div class="publication">
+        <p>
+          <strong>
+            The Drowning-Refugee Effect: Media Salience and
+            Xenophobic Attitudes.
+          </strong>
+          <em>Applied Economics Letters</em>, 24(16), 1167–1172, 2017.
+          With Silvia De Poli and Niklas Jakobsson.
+        </p>
+      </div>
+
+      <h3>2016</h3>
+
+      <div class="publication">
+        <p>
+          <strong>
+            The Effects of 9/11 on Attitudes toward Immigration and
+            the Moderating Role of Education.
+          </strong>
+          <em>Kyklos</em>, 69(4), 604–632, 2016.
+        </p>
+      </div>
+
+      <h3>2015</h3>
+
+      <div class="publication">
+        <p>
+          <strong>The 9/11 Conservative Shift.</strong>
+          <em>Economics Letters</em>, 135, 80–84, 2015.
+          <a href="https://doi.org/10.1016/j.econlet.2015.07.031">
+            DOI
+          </a>
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Parental Ethnic Identity and Educational Attainment
+            of Second-Generation Immigrants.
+          </strong>
+          <em>Journal of Population Economics</em>,
+          28(4), 965–1004, 2015.
+          <a href="https://doi.org/10.1007/s00148-015-0559-7">
+            DOI
+          </a>
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Kick It Like Özil? Decomposing the Native-Migrant Education Gap.
+          </strong>
+          <em>International Migration Review</em>,
+          49(3), 757–789, 2015.
+          With Annabelle Krause and Ulf Rinne.
+          <a href="https://doi.org/10.1111/imre.12107">DOI</a>
+        </p>
+      </div>
+
+      <h3>2014 and earlier</h3>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Evidence and Persistence of Education Inequality in an
+            Early-Tracking System – The German Case.
+          </strong>
+          <em>Scuola Democratica</em>, 2, 2014.
+          With Annabelle Krause.
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Ethnic Diversity and Labor Market Success
+            (Ethnische Vielfalt und Arbeitsmarkterfolg).
+          </strong>
+          <em>Zeitschrift für ArbeitsmarktForschung / Journal for
+          Labour Market Research</em>, 44(1/2), 81–89, 2011.
+          With Ulf Rinne and Klaus F. Zimmermann.
+        </p>
+      </div>
+
+      <p class="note">
+        For additional publications and updated bibliographic details,
+        see my
+        <a href="https://www.dji.de/en/about-us/employees/detailview/mitarbeiter/simone-schueller.html">
+          official DJI profile
+        </a>
+        and
+        <a href="https://ideas.repec.org/f/c/psc499.html">
+          IDEAS/RePEc profile
+        </a>.
+      </p>
+    </section>
+
+    <section id="policy">
+      <h2>Policy &amp; Other Publications</h2>
+
+      <div class="publication">
+        <p>
+          <strong>Homeoffice als Gleichstellungsinstrument.
+          Kausale Evidenz zur Arbeitsteilung in Elternpaaren.</strong>
+          DJI Policy Brief, August 2026.
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Dads Working from Home. What Really Changes Parents'
+            Division of Care Work.
+          </strong>
+          DJI Policy Brief, August 2026.
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Prevention at Birth: Birthright Citizenship Reduces Youth Crime.
+          </strong>
+          CEPR, VoxEU Column, June 2026.
+          With Leander Andres, Stefan Bauernschuster, Gordon B. Dahl,
+          and Helmut Rainer.
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Benefits of Early Integration. Birthright Citizenship
+            and Youth Crime.
+          </strong>
+          <em>EconPol Forum</em>, 27(2), 45–50, 2026.
+          With co-authors.
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Frühestmögliche Prävention durch Integration.
+            Staatsbürgerschaft bei Geburt und Jugendkriminalität.
+          </strong>
+          <em>ifo Schnelldienst</em>, 79(3), 41–45, 2026.
+          With co-authors.
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Linking AID:A Survey Data and Administrative Labor Market
+            Biography Data from the Institute for Employment Research
+            (AID:A-ADIAB 7523).
+          </strong>
+          IAB FDZ-Methodenreport 07|2025 EN, 2025.
+          With Martin Antoni, Christina Boll, and Stefan Dummert.
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Alleinerziehende in der Betreuungsplatzvergabe:
+            Status quo und Handlungsempfehlungen.
+          </strong>
+          <em>Wirtschaftsdienst</em>, 104(5), 336–342, 2024.
+          With Hans S. Steinberg, Y. Öztürk, T. Klein, and P. Schober.
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Zementiertes Rollenverhalten in der Fürsorge für Kinder,
+            trotz Pandemie – Eine Herausforderung für die Familien-
+            und Gleichstellungspolitik.
+          </strong>
+          <em>ifo Schnelldienst</em>, 75(10), 28–33, 2022.
+          With Christina Boll and Daniel Müller.
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Aufteilung der Sorge- und Erwerbsarbeit zwischen Frauen
+            und Männern: In der Pandemie ändern sich Geschlechterrollen kaum.
+          </strong>
+          <em>IAB-Kurzbericht</em>, 5/2022.
+          With co-authors.
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Wiring the Labor Market Revisited: Working from Home
+            in the Digital Age.
+          </strong>
+          <em>CESifo Forum</em>, 21(3), 10–14, 2020.
+          With Jan-Philip V. Alipour, Oliver Falck, and Andreas Mergener.
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Homeoffice während der Pandemie und die Implikationen
+            für eine Zeit nach der Krise.
+          </strong>
+          <em>ifo Schnelldienst</em>, 73(7), 30–36, 2020.
+          With Jan-Philip V. Alipour and Oliver Falck.
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>Quo vadis paarinterne Arbeitsteilung post coronam?</strong>
+          <em>Wirtschaftsdienst</em>, 100(7), 556–558, 2020.
+          With Christina Boll.
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>Querschnittstechnologie Internet –
+          Universallösung für den Arbeitsmarkt der Zukunft?</strong>
+          <em>Wirtschaftsdienst</em>, 96(8), 609–613, 2016.
+          With Oliver Falck.
+        </p>
+      </div>
+
+      <div class="publication">
+        <p>
+          <strong>
+            Schulkarrieren: Die soziale Herkunft ist wichtiger
+            als der Migrationshintergrund.
+          </strong>
+          <em>PERSONALquarterly</em>, 03/13, 21–25, 2013.
+          With Annabelle Krause and Ulf Rinne.
+        </p>
+      </div>
     </section>
 
     <section id="projects">
       <h2>Research Projects</h2>
+
       <p>
-        Information on current research projects
-        and collaborations will be added here.
+        My current research is embedded in the work of the German
+        Youth Institute, particularly its research on families,
+        family policy, and the AID:A survey.
+      </p>
+
+      <ul>
+        <li>
+          <strong>AID:A – Growing Up in Germany:</strong>
+          Research on the living conditions and development of
+          children, adolescents, young adults, and their families.
+        </li>
+        <li>
+          <strong>Families and Family Policy:</strong>
+          Empirical research on family circumstances, parental
+          employment, care work, and family well-being.
+        </li>
+        <li>
+          <strong>Post-Separation Families:</strong>
+          Research using the Growing Up in Germany panel to
+          understand family circumstances following parental separation.
+        </li>
+        <li>
+          <strong>Digitalization and Work:</strong>
+          Research on working from home, digital infrastructure,
+          and the organization of paid and unpaid work.
+        </li>
+      </ul>
+
+      <p>
+        More information:
+        <a href="https://www.dji.de/en/about-us/employees/detailview/mitarbeiter/simone-schueller.html">
+          DJI profile and current projects
+        </a>.
       </p>
     </section>
 
     <section id="cv">
       <h2>Curriculum Vitae</h2>
+
       <p>
-        <a href="cv.pdf">Download my CV (PDF)</a>
+        Download my academic CV for information on education,
+        professional experience, research affiliations,
+        publications, and other academic activities.
+      </p>
+
+      <p>
+        <a href="cv_schueller_06_2026.pdf">
+          Download CV (PDF, June 2026)
+        </a>
       </p>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
+
       <p>
-Dr. Simone Schüller
-
-Deutsches Jugendinstitut e.V.
-
-Department Familes and Family Policy
-
-Nockherstr. 2
-
-81541 Munich, Germany
-
-schueller@dji.de
+        <strong>Dr. Simone Schüller</strong><br>
+        German Youth Institute (Deutsches Jugendinstitut, DJI)<br>
+        Department of Families and Family Policies<br>
+        Nockherstraße 2<br>
+        81541 Munich, Germany
       </p>
+
       <p>
+        Email:
+        <a href="mailto:schueller@dji.de">schueller@dji.de</a>
+      </p>
+
+      <p class="contact-links">
         <a href="https://scholar.google.com/">
           Google Scholar
         </a>
-        ·
-        <a href="https://orcid.org/">
+        <a href="https://orcid.org/0000-0002-9842-6258">
           ORCID
+        </a>
+        <a href="https://ideas.repec.org/f/c/psc499.html">
+          IDEAS/RePEc
+        </a>
+        <a href="https://www.iza.org/en/person/6272/simone-schuller">
+          IZA
+        </a>
+        <a href="https://cepr.org/about/people/simone-schuller">
+          CEPR
         </a>
       </p>
     </section>
@@ -214,3 +825,4 @@ schueller@dji.de
   </footer>
 </body>
 </html>
+
