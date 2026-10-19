@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Academic website of Simone Schüller, Senior Researcher in Economics.">
   <title>Simone Schüller | Economics</title>
+
   <style>
     body {
       max-width: 850px;
@@ -16,14 +17,62 @@
       line-height: 1.7;
       background: #fff;
     }
-    header { border-bottom: 1px solid #dce2e8; padding-bottom: 25px; }
-    h1 { font-size: 2.4rem; margin-bottom: 4px; color: #183650; }
-    h2 { color: #183650; margin-top: 35px; font-size: 1.3rem; }
-    .subtitle { color: #5c6b78; }
-    nav { margin-top: 20px; }
-    nav a { margin-right: 18px; }
-    a { color: #24618b; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+
+    header {
+      border-bottom: 1px solid #dce2e8;
+      padding-bottom: 25px;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 4px;
+      color: #183650;
+    }
+
+    h2 {
+      color: #183650;
+      margin-top: 35px;
+      font-size: 1.3rem;
+    }
+
+    .subtitle {
+      color: #5c6b78;
+    }
+
+    .profile-photo {
+      display: block;
+      width: 160px;
+      height: 200px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    nav {
+      margin-top: 20px;
+    }
+
+    nav a {
+      margin-right: 18px;
+    }
+
+    a {
+      color: #24618b;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     footer {
       border-top: 1px solid #dce2e8;
       margin-top: 45px;
@@ -31,19 +80,51 @@
       color: #71808b;
       font-size: .9rem;
     }
+
     @media (max-width: 600px) {
-      body { margin-top: 30px; }
-      h1 { font-size: 2rem; }
-      nav a { display: inline-block; margin-bottom: 8px; }
+      body {
+        margin-top: 30px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .header-content {
+        flex-direction: column-reverse;
+        gap: 15px;
+      }
+
+      .profile-photo {
+        width: 130px;
+        height: 160px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin-bottom: 8px;
+      }
     }
   </style>
 </head>
+
 <body>
   <header>
-    <h1>Simone Schüller</h1>
-    <div class="subtitle">
-      Senior Researcher in Economics · Munich, Germany
+    <div class="header-content">
+      <div>
+        <h1>Simone Schüller</h1>
+        <div class="subtitle">
+          Senior Researcher in Economics · Munich, Germany
+        </div>
+      </div>
+
+      <img
+        src="1_DSC09994b3.jpg"
+        alt="Simone Schüller"
+        class="profile-photo"
+      >
     </div>
+
     <nav>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
