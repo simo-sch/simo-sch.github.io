@@ -17,6 +17,23 @@
       --background: #ffffff;
     }
 
+    /* Highlight selected publications with a subtle dot */
+.publication.selected {
+  position: relative;
+  padding-left: 18px;
+}
+
+.publication.selected::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #527a70;
+}
+
     * { box-sizing: border-box; }
 
     html { scroll-behavior: smooth; }
@@ -231,7 +248,7 @@
       <h2>Work from Home &amp; Family</h2>
 
       
-      <div class="publication">
+      <div class="publication selected">
         <p>
          <strong><a href="https://doi.org/10.1016/j.labeco.2026.102866">
   Estimating the Effect of Working from Home on Parents'
@@ -268,7 +285,7 @@
         </p>
       </div>
       
-      <div class="publication">
+      <div class="publication selected">
         <p>
           <strong><a href="https://doi.org/10.1016/j.euroecorev.2022.104354">
   Germany's Capacities to Work from Home.
@@ -337,7 +354,7 @@
 
 
       
-      <div class="publication">
+      <div class="publication selected">
         <p>
           <strong><a href="https://doi.org/10.1016/j.respol.2019.103861">
   Internet and Voting in the Social Media Era:
@@ -349,7 +366,7 @@
       </div>      
 
 
-      <div class="publication">
+      <div class="publication selected">
         <p>
           <strong><a href="https://doi.org/10.1016/j.regsciurbeco.2019.03.002">
   Broadband Upgrade and Firm Performance in Rural Areas:
@@ -391,7 +408,7 @@
 
       
       
-      <div class="publication">
+      <div class="publication selected">
         <p>
           <strong><a href="https://doi.org/10.1257/pandp.20261097">Birthright Citizenship and Youth Crime.</a></strong>
           <em>American Economic Association: Papers &amp; Proceedings</em>,
@@ -586,7 +603,7 @@
         </p>
       </div>
 
-       <div class="publication">
+       <div class="publication selected">
         <p>
           <strong><a href="https://doi.org/10.1016/j.labeco.2022.102217">
   Parents under Stress: Evaluating Emergency Childcare Policies
